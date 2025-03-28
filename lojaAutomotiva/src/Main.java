@@ -21,7 +21,11 @@ public class Main {
 
             switch (entrada) {
                 case "?":   //apresentar nome do prox cliente e remover da lista
-                    System.out.println(clientes.remove(0));
+                    if(clientes.isEmpty()){
+                        System.out.println("A fila está vazia");
+                    }else {
+                        System.out.println(clientes.remove(0));
+                    }
                     break;
                 case "sair":    //terminar o programa
                     sair = true;
